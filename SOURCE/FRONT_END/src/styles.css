@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: 'futura';
+    src: url("./assets/fonts/futura.otf");
+}
+@font-face {
+    font-family: 'raboto';
+    src: url("./assets/fonts/raboto.ttf");
+}
+body{
+    background-color: #060717;
+    padding: 0 0;
+}
+

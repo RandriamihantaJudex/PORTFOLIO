@@ -1,0 +1,15 @@
+<div class="flex h-[7%] w-full items-center justify-between  text-white dark:text-[#060717] ">
+    <h1 class="font-futura tracking-wide text-2xl ">JR<span class="text-2xl font-semibold">_</span></h1>
+    <div class=" flex justify-between items-center gap-4">
+        <div (click)="changeTheme()"
+            class="border-[1.5px] border-white dark:border-[#060717] rounded-2xl h-7 w-[44px] flex items-center justify-evenly ">
+            <div class="invisible" #sunRef>
+                <fa-icon [icon]="sun" class="text-sm"></fa-icon>
+            </div>
+            <div class="" #moonRef>
+                <fa-icon [icon]="moon " class="text-base"></fa-icon>
+            </div>
+
+        </div>
+        <fa-icon [icon]="burger" class="text-2xl "></fa-icon>
+    </div>
