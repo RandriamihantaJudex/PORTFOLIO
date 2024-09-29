@@ -1,7 +1,9 @@
 <div class="h-[100%] w-full" [ngClass]="darkService.themeMode()">
-    <div class="bg-[#060717] h-screen w-full dark:bg-white px-[10%]">
+    <app-loading></app-loading>
+    <div class="bg-[#060717] h-screen w-full dark:bg-white px-[10%] -z-50">
         <app-navbar></app-navbar>
         <router-outlet></router-outlet>
+        
     </div> 
   
 </div>

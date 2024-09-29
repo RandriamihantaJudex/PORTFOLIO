@@ -7,12 +7,15 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
+export class HomeComponent  implements AfterViewInit{
   @ViewChild('nom') nom!: ElementRef
   @ViewChild('lineOne') lineOne!: ElementRef
   @ViewChild('lineTwo') lineTwo!: ElementRef
   
 
-
+  ngAfterViewInit(): void {
+      this.lineOne.nativeElement.style.setProperty('--largeur', `${this.nom.nativeElement.clientWidth}px`);
+      this.lineTwo.nativeElement.style.setProperty('--largeurTwo', `${this.nom.nativeElement.clientWidth-(this.nom.nativeElement.clientWidth/3)}px`);
+  }
 
 }

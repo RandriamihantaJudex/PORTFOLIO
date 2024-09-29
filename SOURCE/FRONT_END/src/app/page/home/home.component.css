@@ -1,0 +1,31 @@
+:root{
+    --couleur:red;
+    --largeur:0px;
+    --largeurTwo:0px;
+}
+.lineOne{
+    animation: line ease-in-out forwards 1.3s ;
+}
+.lineTwo{
+    animation: lineDeux ease-in-out forwards 1.1s ;
+    animation-delay:0.8s ;
+
+}
+
+@keyframes line {
+ 0%{
+    width: 0;
+ }   
+ 100%{
+    width: var(--largeur);
+ }
+}
+
+@keyframes lineDeux {
+    0%{
+       width: 0;
+    }   
+    100%{
+       width: var(--largeurTwo);
+    }
+   }

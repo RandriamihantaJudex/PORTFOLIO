@@ -1,0 +1,13 @@
+.code {
+    animation: disapear 0.5s infinite alternate;
+}
+
+@keyframes disapear {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
