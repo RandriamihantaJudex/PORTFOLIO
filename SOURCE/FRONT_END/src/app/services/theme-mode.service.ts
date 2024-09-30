@@ -1,14 +1,18 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, OnInit, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ThemeModeService {
-  themeMode= signal<string>('null')
+export class ThemeModeService  {
+  themeMode = signal<string | null>('null')
 
-  getTheme(){
-      this.themeMode.update((value=>(value==='dark'?'null':'dark')))
+
+  setMode(mode: string) {
+    localStorage.setItem('mode', mode)
   }
 
+  changeThemeToggle() {
+    this.themeMode.update((value => (value === 'null' ? 'dark' : 'null')))
+  }
 
 }

@@ -1,0 +1,31 @@
+.cloud {
+    animation: leave 1.4s ease-in forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes leave {
+    0% {
+        transform: translateX(0); /* Position initiale */
+      }
+      100% {
+        transform: translateX(-100%); /* Glisse complètement hors de l'écran à gauche */
+      }
+}
+
+.cloudReverse {
+    animation: leaveReverse 1.4s ease-in forwards;
+    animation-delay: 0.3s;
+}
+.cloudReverse2 {
+    animation: leaveReverse 2.5s ease-in forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes leaveReverse {
+    0% {
+        transform: translateX(0); /* Position initiale */
+      }
+      100% {
+        transform: translateX(200%); /* Glisse complètement hors de l'écran à gauche */
+      }
+}
