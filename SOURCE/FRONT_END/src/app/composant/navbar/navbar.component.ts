@@ -1,18 +1,26 @@
-import { AfterContentInit, AfterRenderRef, AfterViewInit, Component, ElementRef, inject, OnInit, signal, ViewChild } from '@angular/core';
+import {AfterViewInit, Component, ElementRef, inject, Input, signal, ViewChild } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { faBars, faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 import { ThemeModeService } from '../../services/theme-mode.service';
-import { AsyncLocalStorage } from 'async_hooks';
+import { SliderMenuComponent } from '../slider-menu/slider-menu.component';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule,SliderMenuComponent,CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent implements AfterViewInit {
+
+  etat=signal(false)
+  show(){
+    this.etat.set(true)
+  }
+
+
   themeService = inject(ThemeModeService)
   @ViewChild('sunRef') sunRef!: ElementRef;
   @ViewChild('moonRef') moonRef!: ElementRef;
@@ -33,6 +41,7 @@ export class NavbarComponent implements AfterViewInit {
 
   
 ngAfterViewInit(): void {
+    // change l'icone en soleil/lune en fonction du mode apres l'initialisation des composants 
     if(this.themeService.themeMode() === 'dark'){
       this.addClass(this.moonRef)
       this.removeClass(this.sunRef)

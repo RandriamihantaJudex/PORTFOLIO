@@ -5,18 +5,25 @@ import { NavbarComponent } from './composant/navbar/navbar.component';
 import { CommonModule } from '@angular/common';
 import { ThemeModeService } from './services/theme-mode.service';
 import { LoadingComponent } from './composant/loading/loading.component';
+import { SliderMenuComponent } from './composant/slider-menu/slider-menu.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, CommonModule, LoadingComponent],
+  imports: [
+    RouterOutlet,
+    NavbarComponent,
+    CommonModule,
+    LoadingComponent,
+    SliderMenuComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
   darkService = inject(ThemeModeService)
   ngOnInit(): void {
-    if (localStorage.getItem('mode')!==undefined) {
+    if (localStorage.getItem('mode') !== undefined) {
       this.darkService.themeMode.set(localStorage.getItem('mode'))
       console.log(localStorage);
     }
@@ -24,4 +31,5 @@ export class AppComponent implements OnInit {
       this.darkService.themeMode.set('null')
     }
   }
+
 }
