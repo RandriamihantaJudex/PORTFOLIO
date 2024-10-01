@@ -4,7 +4,8 @@ import { faBars, faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 import { ThemeModeService } from '../../services/theme-mode.service';
 import { SliderMenuComponent } from '../slider-menu/slider-menu.component';
 import { CommonModule } from '@angular/common';
-
+import { MenuService } from '../../services/menu.service';
+import { AnimationMenuTwoComponent } from '../animation-menu-two/animation-menu-two.component';
 
 @Component({
   selector: 'app-navbar',
@@ -15,15 +16,17 @@ import { CommonModule } from '@angular/common';
 })
 export class NavbarComponent implements AfterViewInit {
 
-  etat=signal(false)
-  show(){
-    this.etat.set(true)
-  }
+  etatMenu= inject(MenuService)
+
+  
+
+
 
 
   themeService = inject(ThemeModeService)
   @ViewChild('sunRef') sunRef!: ElementRef;
   @ViewChild('moonRef') moonRef!: ElementRef;
+
   //ICONES
   burger = faBars
   sun = faSun
@@ -69,6 +72,8 @@ ngAfterViewInit(): void {
     }
   }
 
+
+  
 
 
 }

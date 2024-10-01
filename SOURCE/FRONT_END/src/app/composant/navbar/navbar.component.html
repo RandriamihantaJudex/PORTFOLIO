@@ -1,10 +1,13 @@
 
-@if (etat()) {
+@if (etatMenu.menuState()==='in') {
     <app-slider-menu></app-slider-menu>
 }
-@else {
-    <p>nope</p>
+@else if (etatMenu.menuState()==='out') {
 }
+@else {
+    
+}
+
 <div  class="flex h-[7%] w-full items-center justify-between  text-white dark:text-[#060717] z-50">
     <h1 class="z-10 font-futura tracking-wide text-2xl ">JR<span class="code text-2xl font-semibold">_</span></h1>
     <div class=" flex justify-between items-center gap-4 z-10">
@@ -18,8 +21,7 @@
             </div>
 
         </div>
-        <fa-icon (click)="show()"  [icon]="burger" class="text-2xl "></fa-icon>
+        <fa-icon (click)="etatMenu.chageMenuState()"  [icon]="burger" class="text-2xl "></fa-icon>
     </div>
     <!-- finMenu -->
-    
 </div>

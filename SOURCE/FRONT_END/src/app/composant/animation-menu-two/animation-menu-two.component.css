@@ -1,0 +1,66 @@
+.br1 {
+    animation: ensemble 0.8s forwards ease-out;
+    animation-delay: 0s;
+}
+
+@keyframes ensemble {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        height: 12%;
+        transform: translateX(-100%);
+        display: none;
+    }
+}
+
+.br2 {
+    animation: ensemble2 0.5s forwards ease-out;
+    animation-delay: 0s;
+}
+
+@keyframes ensemble2 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+        display: none;
+    }
+}
+
+.br3 {
+    animation: ensemble3 0.7s forwards ease-out;
+    animation-delay: 0s;
+}
+
+@keyframes ensemble3 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+        display: none;
+
+    }
+}
+
+.br4 {
+    animation: ensemble4 0.8s forwards ease-out;
+    animation-delay: 0s;
+}
+
+@keyframes ensemble4 {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+        display: none;
+
+    }
+}

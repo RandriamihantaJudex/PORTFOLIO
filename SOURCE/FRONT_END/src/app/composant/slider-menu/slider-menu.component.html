@@ -1,29 +1,30 @@
 <div class="slider w-full fixed z-20 -ml-[10%] ">
+  
+   <app-animation-menu></app-animation-menu>
 
-    <div class="br1  h-[10%] absolute w-full"></div>
-    <!-- 2 -->
-    <div class="br2  h-[10%] top-[10%] absolute w-[60%]"></div>
-    <div class="br3  h-[10%] top-[10%] left-[60%] absolute w-[40%] "></div>
-    <!-- 3 -->
-    <div class="br2  h-[10%] top-[20%] absolute w-[40%] "></div>
-    <div class="br3  h-[10%] top-[20%] left-[40%] absolute w-[60%]"></div>
-    <!-- 4 -->
-    <div class="br2  h-[12%] top-[30%] absolute w-[12%] "></div>
-    <div class="br3  h-[12%] top-[30%] left-[10%] absolute w-[90%]"></div>
-    <!-- 5 -->
-    <div class="br4  h-[12%] top-[40%] absolute w-full -mb-[1px]"></div>
-    <!-- 6 -->
-    <div class="br2  h-[12%] top-[50%] absolute w-[60%] "></div>
-    <div class="br3  h-[12%] top-[50%] left-[60%] absolute w-[40%] "></div>
-     <!-- 7 -->
-     <div class="br2  h-[10%] top-[60%] absolute w-[40%] "></div>
-     <div class="br3  h-[10%] top-[60%] left-[40%] absolute w-[60%]"></div>
-      <!-- 8 -->
-    <div class="br2  h-[10%] top-[70%] absolute w-[12%] "></div>
-    <div class="br3  h-[10%] top-[70%] left-[10%] absolute w-[90%]"></div>
-      <!-- 9 -->
-      <div class="br4  h-[12%] top-[80%] absolute w-full -mb-[1px]"></div>
-        <!-- 10 -->
-    <div class="br2  h-[10%] top-[90%] absolute w-[12%] "></div>
-    <div class="br3  h-[10%] top-[90%] left-[10%] absolute w-[90%]"></div>
-</div>
+    <div class=" font-raboto after2 fixed h-screen w-full bg-white dark:bg-[#060717] p-[7%] flex flex-col items-center justify-between">
+        <div class="  w-full flex items-center justify-between" >
+          <button class="px-2 py-1 dark:bg-white bg-[#060717] text-white dark:text-[#060717] rounded-md" >CV <fa-icon [icon]="download"></fa-icon></button>
+          <fa-icon (click)="etatMenu.chageMenuState()" [icon]="close" class="dark:text-white text-[#060717] text-2xl"></fa-icon>
+        </div>
+        <div class="flex flex-col items-center justify-evenly w-full gap-4">
+
+            <app-icon-menu [icon]="home" titre="Home" class="w-full dark:text-white text-[#060717]"></app-icon-menu>
+            <app-icon-menu-reverse [icon]="projects" titre="Projects" class="w-full dark:text-white text-[#060717]"> </app-icon-menu-reverse>
+            <app-icon-menu-reseau [icon]="lien" titre="Social Media" class="w-full dark:text-white text-[#060717] "></app-icon-menu-reseau>
+            <app-icon-menu-reverse [icon]="send" titre="Contact" class="w-full dark:text-white text-[#060717]"> </app-icon-menu-reverse>
+        </div>
+        <div class="bg-red w-full flex flex-col items-center gap-2">
+          <p class="text-[#060617] dark:text-white font-raboto">Notez votre experience sur le portfolio</p>
+          <div class="flex items-center justify-center gap-2">
+              <fa-icon [icon]="star" class="text-[#060617] dark:text-white text-3xl"></fa-icon>
+              <fa-icon [icon]="star" class="text-[#060617] dark:text-white text-3xl"></fa-icon>
+              <fa-icon [icon]="star" class="text-[#060617] dark:text-white text-3xl"></fa-icon>
+              <fa-icon [icon]="star" class="text-[#060617] dark:text-white text-3xl"></fa-icon>
+              <fa-icon [icon]="star" class="text-[#060617] dark:text-white text-3xl"></fa-icon>
+          </div>
+        </div>
+        
+        
+    </div>
+  </div>
