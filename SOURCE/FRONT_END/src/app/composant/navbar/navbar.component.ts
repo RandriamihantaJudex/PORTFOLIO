@@ -5,7 +5,6 @@ import { ThemeModeService } from '../../services/theme-mode.service';
 import { SliderMenuComponent } from '../slider-menu/slider-menu.component';
 import { CommonModule } from '@angular/common';
 import { MenuService } from '../../services/menu.service';
-import { AnimationMenuTwoComponent } from '../animation-menu-two/animation-menu-two.component';
 
 @Component({
   selector: 'app-navbar',
@@ -17,11 +16,6 @@ import { AnimationMenuTwoComponent } from '../animation-menu-two/animation-menu-
 export class NavbarComponent implements AfterViewInit {
 
   etatMenu= inject(MenuService)
-
-  
-
-
-
 
   themeService = inject(ThemeModeService)
   @ViewChild('sunRef') sunRef!: ElementRef;
@@ -56,10 +50,10 @@ ngAfterViewInit(): void {
     
 }
   changeTheme() {
-    // le theme "null" c'est le dark mode et le theme "dark" c'est le light mode
+    // Le theme "null" c'est le dark mode et le theme "dark" c'est le light mode
     this.themeService.changeThemeToggle()
 
-    //  ceci stock le mode(dark/null) dans le localstorage
+    //  Ceci stock le mode(dark/null) dans le localstorage
     this.themeService.themeMode() === 'null' ? this.themeService.setMode('null') : this.themeService.setMode('dark')
 
     if (this.moonRef.nativeElement.classList.contains('invisible')) {

@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
   darkService = inject(ThemeModeService)
   VraiTheme=signal(this.darkService.themeMode)
   etatMenu= inject(MenuService)
+
   ngOnInit(): void {
     if (localStorage.getItem('mode') !== undefined) {
       this.darkService.themeMode.set(localStorage.getItem('mode'))
@@ -36,5 +37,6 @@ export class AppComponent implements OnInit {
       this.darkService.themeMode.set('null')
     }
   }
+  
 
 }

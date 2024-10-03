@@ -9,6 +9,10 @@
     font-family: 'raboto';
     src: url("./assets/fonts/raboto.ttf");
 }
+@font-face {
+    font-family: 'mont';
+    src: url("./assets/fonts/mont.otf");
+}
 body{
     padding: 0 0;
 }

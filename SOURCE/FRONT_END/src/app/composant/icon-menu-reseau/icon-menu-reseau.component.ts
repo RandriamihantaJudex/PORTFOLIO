@@ -29,8 +29,7 @@ showSlocials(){
 }
 
 lienReseau(link:string){
-  console.log(link);
-  
+  console.log(link); 
 }
 
 

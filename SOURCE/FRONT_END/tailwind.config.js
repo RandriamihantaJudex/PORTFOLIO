@@ -9,6 +9,7 @@ module.exports = {
       fontFamily: {
         futura: ['futura', 'sans-serif'],
         raboto: ['raboto', 'sans-serif'],
+        mont: ['mont', 'sans-serif'],
       },
     },
   },

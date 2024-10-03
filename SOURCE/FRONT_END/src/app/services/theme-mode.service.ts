@@ -4,7 +4,7 @@ import { Injectable, OnInit, signal } from '@angular/core';
   providedIn: 'root'
 })
 export class ThemeModeService  {
-  themeMode = signal<string | null>('null')
+  themeMode = signal<string | null>('dark')
 
   constructor(){
     if(this.isBrowser()){

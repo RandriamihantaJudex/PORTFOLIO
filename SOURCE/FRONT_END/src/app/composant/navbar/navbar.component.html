@@ -2,26 +2,20 @@
 @if (etatMenu.menuState()==='in') {
     <app-slider-menu></app-slider-menu>
 }
-@else if (etatMenu.menuState()==='out') {
-}
-@else {
-    
-}
 
-<div  class="flex h-[7%] w-full items-center justify-between  text-white dark:text-[#060717] z-50">
-    <h1 class="z-10 font-futura tracking-wide text-2xl ">JR<span class="code text-2xl font-semibold">_</span></h1>
+<nav  class="flex h-[7%] w-full items-center justify-between  text-white dark:text-[#363636] z-50">
+    <h1 class="z-10 font-mont text-[#00b89f] tracking-wide text-2xl ">JR<span class="code font-raboto text-2xl font-semibold">_</span></h1>
     <div class=" flex justify-between items-center gap-4 z-10">
         <div (click)="changeTheme()"
-            class="border-[1.5px] border-white dark:border-[#060717] rounded-2xl h-7 w-[44px] flex items-center justify-evenly ">
+            class="border-[1.5px] border-white dark:border-[#363636] rounded-2xl h-7 w-[44px] flex items-center justify-evenly ">
             <div class="invisible" #sunRef>
                 <fa-icon [icon]="sun" class="text-sm"></fa-icon>
             </div>
-            <div class="" #moonRef>
+            <div #moonRef>
                 <fa-icon [icon]="moon " class="text-base"></fa-icon>
             </div>
 
         </div>
         <fa-icon (click)="etatMenu.chageMenuState()"  [icon]="burger" class="text-2xl "></fa-icon>
     </div>
-    <!-- finMenu -->
-</div>
+</nav>
