@@ -5,11 +5,12 @@ import { ThemeModeService } from '../../services/theme-mode.service';
 import { SliderMenuComponent } from '../slider-menu/slider-menu.component';
 import { CommonModule } from '@angular/common';
 import { MenuService } from '../../services/menu.service';
+import { AnimationMenuTwoComponent } from '../animation-menu-two/animation-menu-two.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [FontAwesomeModule,SliderMenuComponent,CommonModule],
+  imports: [FontAwesomeModule,SliderMenuComponent,CommonModule,AnimationMenuTwoComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })

@@ -11,3 +11,16 @@
         opacity: 0;
     }
 }
+
+.disapear{
+    animation: disparaitre 0.8s forwards;
+}
+
+@keyframes disparaitre {
+    0%{
+        
+    }
+    100%{
+        display: none;
+    }
+}

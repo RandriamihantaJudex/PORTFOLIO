@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ProjectComponent } from '../../composant/project/project.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [ProjectComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

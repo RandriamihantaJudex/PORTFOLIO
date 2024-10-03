@@ -3,7 +3,13 @@
     <app-slider-menu></app-slider-menu>
 }
 
-<nav  class="flex h-[7%] w-full items-center justify-between  text-white dark:text-[#363636] z-50">
+@if (etatMenu.menuState()==='out') {
+    <div class="fixed w-full h-screen disapear z-50">
+        <app-animation-menu-two></app-animation-menu-two>
+    </div>
+}
+
+<nav  class="z-20 fixed px-[10%] flex h-[7vh] w-full items-center justify-between  text-white dark:text-[#363636]  bg-[#363636] dark:bg-white">
     <h1 class="z-10 font-mont text-[#00b89f] tracking-wide text-2xl ">JR<span class="code font-raboto text-2xl font-semibold">_</span></h1>
     <div class=" flex justify-between items-center gap-4 z-10">
         <div (click)="changeTheme()"
