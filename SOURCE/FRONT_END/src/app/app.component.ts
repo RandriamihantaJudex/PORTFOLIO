@@ -1,6 +1,5 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from './page/home/home.component';
 import { NavbarComponent } from './composant/navbar/navbar.component';
 import { CommonModule } from '@angular/common';
 import { ThemeModeService } from './services/theme-mode.service';
@@ -25,18 +24,16 @@ import { MenuService } from './services/menu.service';
 })
 export class AppComponent implements OnInit {
   darkService = inject(ThemeModeService)
-  VraiTheme=signal(this.darkService.themeMode)
   etatMenu= inject(MenuService)
 
   ngOnInit(): void {
-    if (localStorage.getItem('mode') !== undefined) {
-      this.darkService.themeMode.set(localStorage.getItem('mode'))
-      this.VraiTheme.set(this.darkService.themeMode)
-    }
-    else {
-      this.darkService.themeMode.set('null')
+    if(this.isBrowser()){
+      localStorage.getItem('mode') !== undefined ? this.darkService.themeMode.set(localStorage.getItem('mode')) : this.darkService.themeMode.set('null')
     }
   }
   
+  private isBrowser(): boolean {
+    return typeof window !== 'undefined';
+  }
 
 }

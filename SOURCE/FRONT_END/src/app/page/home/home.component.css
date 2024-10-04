@@ -31,3 +31,13 @@
        width: var(--largeurTwo);
     }
    }
+
+
+
+.titre{
+   position: fixed;
+   margin-top: -68vh;
+   z-index: 19;
+   margin-left:-10%;
+   padding: 0 10%;
+}   

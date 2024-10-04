@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, inject, Input, signal, ViewChild } from '@angular/core';
+import {AfterViewInit, Component, ElementRef, inject,ViewChild } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 import { faBars, faSun, faMoon } from '@fortawesome/free-solid-svg-icons'
 import { ThemeModeService } from '../../services/theme-mode.service';

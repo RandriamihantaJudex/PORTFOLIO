@@ -1,9 +1,8 @@
-import { AfterViewInit, Component, ElementRef, input, Input, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import {faFacebook, faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons'
-import { log } from 'console';
 @Component({
   selector: 'app-icon-menu-reseau',
   standalone: true,
@@ -29,7 +28,7 @@ showSlocials(){
 }
 
 lienReseau(link:string){
-  console.log(link); 
+  // console.log(link); 
 }
 
 

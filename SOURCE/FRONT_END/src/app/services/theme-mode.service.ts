@@ -1,4 +1,4 @@
-import { Injectable, OnInit, signal } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +14,7 @@ export class ThemeModeService  {
       else {
        this.themeMode.set('null')
       }
-    }
-  
+    }  
   }
 
   private isBrowser(): boolean {

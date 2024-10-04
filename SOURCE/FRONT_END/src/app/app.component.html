@@ -1,12 +1,6 @@
 <div class="w-full" [ngClass]="darkService.themeMode()">
 
-
     <app-navbar></app-navbar>
-    <!-- @if (etatMenu.menuState()==='out') {
-    <div class="fixed w-full h-screen">
-        <app-animation-menu-two></app-animation-menu-two>
-    </div>
-    } -->
     <app-loading></app-loading>
     <div class="bg-[#363636]  w-full dark:bg-white px-[10%] -z-50">
         <router-outlet></router-outlet>

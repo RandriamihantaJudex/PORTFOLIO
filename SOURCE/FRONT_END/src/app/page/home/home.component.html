@@ -1,10 +1,10 @@
 <div class=" text-white dark:text-[rgb(54,54,54)] h-auto">
      <!-- PRESENTATION -->
     <div class="h-[60vh] w-full inline-flex  flex-col justify-center items-start mt-[15vh]">
-        <h2 #nom class="font-mont text-4xl -mt-[100px] z-10 text-[#00b89f]">Randriamihanta</h2>
-        <h2 class="font-mont text-4xl z-10 text-[#00b89f]">Judex</h2>
-        <div #lineOne class="lineOne bg-[#00b89f] h-[1.5px] mt-2"></div>
-        <div #lineTwo class="lineTwo bg-[#00b89f] h-[1.5px] mt-3"></div>
+        <h2 #nom class="font-mont text-4xl -mt-[100px] z-10 dark:text-[#00b89f] text-white">Randriamihanta</h2>
+        <h2 class="font-mont text-4xl z-10 dark:text-[#00b89f] text-white">Judex</h2>
+        <div #lineOne class="lineOne dark:bg-[#00b89f] bg-white h-[1.5px] mt-2"></div>
+        <div #lineTwo class="lineTwo dark:bg-[#00b89f] bg-white h-[1.5px] mt-3"></div>
         <h3 class="font-mont mt-5 z-10 text-xl text-white dark:text-[#363636] "><span
                 class="font-bold text-2xl text-[#00b89f] ">Frontend</span> developer
         </h3>
@@ -25,9 +25,15 @@
 
     <!-- PROJET -->
     <div class="w-full">
-        <h2 class="font-mont text-[#00b89f] text-3xl mb-6">Project</h2>
+        <h2 #titre  class=" w-full font-mont dark:bg-white bg-[#363636] text-white  dark:text-[#00b89f] text-3xl mb-6">Project</h2>
+        <h2 #titreLeure  class="hidden opacity-0 w-full font-mont bg-red-600 text-[#00b89f] text-3xl mb-6">gfgf</h2>
         <app-project></app-project>
         <app-project></app-project>
+        <app-project></app-project>
+    </div>
+
+    <div class="w-full font-mont dark:bg-white bg-[#363636] text-white  dark:text-[#00b89f] text-3xl mb-6">
+        <h2 class="">Skills</h2>
     </div>
 
 </div>
