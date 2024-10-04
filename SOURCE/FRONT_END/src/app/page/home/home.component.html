@@ -26,14 +26,18 @@
     <!-- PROJET -->
     <div class="w-full">
         <h2 #titre  class=" w-full font-mont dark:bg-white bg-[#363636] text-white  dark:text-[#00b89f] text-3xl mb-6">Project</h2>
-        <h2 #titreLeure  class="hidden opacity-0 w-full font-mont bg-red-600 text-[#00b89f] text-3xl mb-6">gfgf</h2>
+        <h2 #titreLeure  class="hidden opacity-0 w-full font-mont  text-[#00b89f] text-3xl mb-6">easterEggs</h2>
         <app-project></app-project>
         <app-project></app-project>
         <app-project></app-project>
     </div>
 
-    <div class="w-full font-mont dark:bg-white bg-[#363636] text-white  dark:text-[#00b89f] text-3xl mb-6">
-        <h2 class="">Skills</h2>
+    <div class="w-full font-mont dark:bg-white bg-[#363636] text-white  dark:text-[#00b89f] text-3xl mb-6 mt-16">
+        <h2 class="mb-2">Skills and Tools</h2>
+        <app-skills [skills]="langages" titre="Frontend"></app-skills>
+        <app-skills [skills]="styles" titre="Style and Design"></app-skills>
+        <app-skills [skills]="tools" titre="Tools"></app-skills>
+
     </div>
 
 </div>
