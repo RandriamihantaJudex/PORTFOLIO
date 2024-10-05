@@ -17,7 +17,8 @@ import { MenuService } from './services/menu.service';
     CommonModule,
     LoadingComponent,
     SliderMenuComponent,
-    AnimationMenuTwoComponent
+    AnimationMenuTwoComponent,
+    
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
