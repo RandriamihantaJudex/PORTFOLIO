@@ -1,16 +1,16 @@
 
-<form class="w-full flex flex-col items-center gap-5 font-raboto " [formGroup]="contactForm">
+<form class="w-full flex flex-col items-center gap-5 font-raboto " [formGroup]="contactForm" (ngSubmit)="sendMessage()">
     <div class="w-full has-[:focus]:border-2 border-b-2 has-[:focus]:rounded-md border-[#00b89f] flex items-center focus:bg-red-600">
-        <fa-icon [icon]="email" class="w-10 text-lg h-full text-[#a1a1a1] px-2 bg-[#36363615] pt-1"></fa-icon>
-        <input formControlName="email" class=" text-[#363636] bg-[#36363615] focus:outline-none rounded-t-sm  w-full py-1" placeholder="JohnDoe@gmail.com" type="text" name="mail" id="mail" >
+        <fa-icon [icon]="email" class="bg-white w-10 text-lg h-full text-[#a1a1a1] px-2 dark:bg-[#36363615] pt-1"></fa-icon>
+        <input formControlName="email" class=" bg-white text-[#363636] dark:bg-[#36363615] focus:outline-none rounded-t-sm  w-full py-1" placeholder="JohnDoe@gmail.com" type="text" name="mail" id="mail" >
      </div>
      <div class="w-full  has-[:focus]:border-2 border-b-2 has-[:focus]:rounded-md border-[#00b89f] flex items-center ">
-        <fa-icon [icon]="nom" class="w-10 text-lg h-full text-[#a1a1a1] px-2 bg-[#36363615] pt-1"></fa-icon>
-        <input formControlName="nom" class=" text-[#363636] bg-[#36363615] focus:outline-none rounded-t-sm  w-full py-1" placeholder="john doe" type="text" name="mail" id="mail" >
+        <fa-icon [icon]="nom" class="bg-white w-10 text-lg h-full text-[#a1a1a1] px-2 dark:bg-[#36363615] pt-1"></fa-icon>
+        <input formControlName="nom" class="bg-white text-[#363636] dark:bg-[#36363615] focus:outline-none rounded-t-sm  w-full py-1" placeholder="john doe" type="text" name="mail" id="mail" >
      </div>
      <div class="w-full  has-[:focus]:border-2 border-b-2 has-[:focus]:rounded-md border-[#00b89f] flex items-center ">
-        <fa-icon [icon]="messageIcon" class="w-10 text-lg h-full text-[#a1a1a1] px-2 bg-[#36363615] pt-1"></fa-icon>
-        <input formControlName="message" class=" text-[#363636] bg-[#36363615] focus:outline-none rounded-t-sm  w-full py-1" placeholder="Hello" type="text" name="mail" id="mail" >
+        <fa-icon [icon]="messageIcon" class="bg-white w-10 text-lg h-full text-[#a1a1a1] px-2 dark:bg-[#36363615] pt-1"></fa-icon>
+        <input formControlName="message" class="bg-white text-[#363636] dark:bg-[#36363615] focus:outline-none rounded-t-sm  w-full py-1" placeholder="Hello" type="text" name="mail" id="mail" >
      </div>
      <button type="submit" class="w-full mt-2 font-mont py-2 px-20 rounded-md bg-[#00b89f] text-white">Envoyer</button>
 </form>

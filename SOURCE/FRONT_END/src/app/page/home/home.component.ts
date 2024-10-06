@@ -5,10 +5,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { IconSkillsService } from '../../services/icon-skills.service';
 import { ContactFormComponent } from '../../composant/contact-form/contact-form.component';
+import { FooterComponent } from '../../composant/footer/footer.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ProjectComponent, SkillsComponent,FontAwesomeModule,ContactFormComponent],
+  imports: [ProjectComponent, SkillsComponent,FontAwesomeModule,ContactFormComponent,FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
