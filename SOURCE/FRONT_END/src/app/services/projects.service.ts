@@ -12,24 +12,29 @@ export class ProjectsService {
   getAllProject(): Project[] {
     return [
       {
+        title: 'Padawan',
+        image: '../../assets/images/padawan.png',
+        link: { github: 'https://github.com/RandriamihantaJudex/PORTFOLIO.git', web: 'http://padawan-12.web.app/' },
+        description: 'Padawan is a web platform that facilitates connections between students and professionals in their field, with the goal of creating mentorship opportunities. Professionals provide advice, support, and guidance to help students advance in their academic and professional journeys.',
+        objectives: [
+          "Facilitate students' integration into the professional world.",
+          "Help students learn best practices in the workplace.",
+          "Enable experienced professionals to mentor the next generation.",
+          "Promote the digital sector and its opportunities."
+        ],
+        images: ['../../assets/images/padawan.png','../../assets/images/padawan.png'],
+        technology: [{nom:'React',image:'../../assets/images/react.svg'},{nom:'React',image:'../../assets/images/react.svg'}],
+        anectodes: 'Aucune Actuellement',
+        favorite: true
+      },
+      {
         title: 'judex',
         image: 'dfdf',
         link: { github: '', web: '' },
         description: '',
         objectives: [''],
         images: [''],
-        technology: [''],
-        anectodes: 'string',
-        favorite: true
-      },
-      {
-        title: 'padawan',
-        image: 'dfdf',
-        link: { github: '', web: '' },
-        description: '',
-        objectives: [''],
-        images: [''],
-        technology: [''],
+        technology: [{nom:'',image:''}],
         anectodes: 'string',
         favorite: true
       },
@@ -40,7 +45,7 @@ export class ProjectsService {
         description: '',
         objectives: [''],
         images: [''],
-        technology: [''],
+        technology: [{nom:'',image:''}],
         anectodes: 'string',
         favorite: true
       },
@@ -51,7 +56,7 @@ export class ProjectsService {
         description: '',
         objectives: [''],
         images: [''],
-        technology: [''],
+        technology: [{nom:'',image:''}],
         anectodes: 'string',
         favorite: false
       }

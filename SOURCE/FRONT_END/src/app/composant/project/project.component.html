@@ -1,31 +1,38 @@
 @if (project) {
-    <div class="bg-white dark:bg-[#363636] rounded-md mb-4 dark:text-white text-[#363636] p-4">
-   
-        <!-- Nom du Projet -->
-        <h3 class="font-mont text-2xl">{{project.title}}</h3>
-        <!-- Description -->
-        <p class="font-raboto text-sm w-full text-justify">{{project.description}}</p>
-        <p class="font-raboto text-xs mt-2 mb-2 font-bold">Made with</p>
-        
-        <!-- Techno -->
-        <div class="flex flex-wrap items-center gap-3">
-            <div class="flex items-center gap-2">
-                <img src="../../../assets/images/react.svg" alt="react icon" class="h-8 w-8">
-                <p>React</p>
-            </div>
-            <p>-</p>
-            <div class="flex items-center gap-2">
-                <img src="../../../assets/images/tailwind.svg" alt="react icon" class="h-8 w-8">
-                <p>Tailwind Css</p>
-            </div>
-        </div>
-        <!-- call to action -->
-         <div class="flex items-center w-full mt-4 justify-between">
-            <button class="bg-[#00b89f] text-white rounded-md w-8/12 font-mont py-1 hover:bg-[#363636] hover:text-white hover:dark:bg-white hover:dark:text-[#00b89f]">See more</button>
-            <fa-icon [icon]="github" class="text-xl"></fa-icon>
-            <fa-icon [icon]="globe" class="text-xl"></fa-icon>
-         </div>
+<div class="bg-white dark:bg-[#363636] rounded-md mb-4 dark:text-white text-[#363636] p-4">
 
-   
+    <!-- Nom du Projet -->
+    <h3 class="font-mont text-2xl">{{project.title}}</h3>
+    <!-- Description -->
+    <p class="font-raboto text-sm w-full text-justify">{{project.description}}</p>
+    <p class="font-raboto text-xs mt-2 mb-2 font-bold">Made with</p>
+
+    <!-- Techno -->
+    <div class="flex flex-wrap items-center gap-3">
+        @for (tech of project.technology; track $index) {
+        <div class="flex items-center gap-2">
+            <img [src]="tech.image" alt="react icon" class="h-8 w-8">
+            <p>{{tech.nom}}</p>
+            <p>-</p>
+        </div>
+
+        }
+
+    </div>
+    <!-- call to action -->
+    <div class="flex items-center w-full mt-4 justify-between">
+        <button (click)="redirect(project.title)"
+            class="bg-[#00b89f] text-white rounded-md w-8/12 font-mont py-1 hover:bg-[#363636] hover:text-white hover:dark:bg-white hover:dark:text-[#00b89f]">See
+            more</button>
+        <a [href]="project.link.github">
+            <fa-icon (click)="redirect(project.link.github)" [icon]="github" class="text-xl"></fa-icon>
+        </a>
+        <a [href]="project.link.web">
+            <fa-icon (click)="redirect(project.link.web)" [icon]="globe" class="text-xl"></fa-icon>
+        </a>
+
+    </div>
+
+
 </div>
 }

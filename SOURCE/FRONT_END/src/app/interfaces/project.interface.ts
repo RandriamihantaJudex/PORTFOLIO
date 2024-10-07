@@ -5,7 +5,7 @@ export interface Project{
     description:string,
     objectives:string[],
     images:string[],
-    technology:string[],
+    technology:{nom:string,image:string}[],
     anectodes:string,
     favorite:boolean
 }
