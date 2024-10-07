@@ -8,6 +8,7 @@ import { IconMenuReseauComponent } from '../icon-menu-reseau/icon-menu-reseau.co
 import { MenuService } from '../../services/menu.service';
 import { AnimationMenuComponent } from '../animation-menu/animation-menu.component';
 import { AnimationMenuTwoComponent } from '../animation-menu-two/animation-menu-two.component';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-slider-menu',
   standalone: true,
@@ -17,7 +18,8 @@ import { AnimationMenuTwoComponent } from '../animation-menu-two/animation-menu-
     IconMenuReverseComponent,
     IconMenuReseauComponent,
     AnimationMenuComponent,
-    AnimationMenuTwoComponent
+    AnimationMenuTwoComponent,
+    RouterLink
   ],
   templateUrl: './slider-menu.component.html',
   styleUrl: './slider-menu.component.css'
@@ -38,4 +40,10 @@ projects =faLayerGroup
 lien=faChevronDown
 send=faPaperPlane
 star=faStar
+
+
+closeIt(){
+  this.etatMenu.chageMenuState()
+}
+
 }

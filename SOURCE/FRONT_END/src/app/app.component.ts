@@ -7,6 +7,7 @@ import { LoadingComponent } from './composant/loading/loading.component';
 import { SliderMenuComponent } from './composant/slider-menu/slider-menu.component';
 import { AnimationMenuTwoComponent } from './composant/animation-menu-two/animation-menu-two.component';
 import { MenuService } from './services/menu.service';
+import { FooterComponent } from './composant/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,8 @@ import { MenuService } from './services/menu.service';
     LoadingComponent,
     SliderMenuComponent,
     AnimationMenuTwoComponent,
+    FooterComponent,
+    
     
   ],
   templateUrl: './app.component.html',

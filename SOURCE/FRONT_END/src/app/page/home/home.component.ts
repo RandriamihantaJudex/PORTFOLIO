@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, inject, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, inject, signal, ViewChild } from '@angular/core';
 import { ProjectComponent } from '../../composant/project/project.component';
 import { SkillsComponent } from '../../composant/skills/skills.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -6,10 +6,12 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { IconSkillsService } from '../../services/icon-skills.service';
 import { ContactFormComponent } from '../../composant/contact-form/contact-form.component';
 import { FooterComponent } from '../../composant/footer/footer.component';
+import { ProjectsService } from '../../services/projects.service';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ProjectComponent, SkillsComponent,FontAwesomeModule,ContactFormComponent,FooterComponent],
+  imports: [CommonModule,ProjectComponent, SkillsComponent,FontAwesomeModule,ContactFormComponent,FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -19,8 +21,8 @@ export class HomeComponent implements AfterViewInit {
   @ViewChild('lineTwo') lineTwo!: ElementRef
   
   skillsIconService= inject(IconSkillsService)
-
- 
+  projectService= inject(ProjectsService)
+  favorite = signal(this.projectService.getFavoriteProjects())
 // ICONS
 arrow=faArrowRight
 
