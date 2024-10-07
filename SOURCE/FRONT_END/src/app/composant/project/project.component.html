@@ -11,9 +11,9 @@
     <div class="flex flex-wrap items-center gap-3">
         @for (tech of project.technology; track $index) {
         <div class="flex items-center gap-2">
+            <p>-</p>
             <img [src]="tech.image" alt="react icon" class="h-8 w-8">
             <p>{{tech.nom}}</p>
-            <p>-</p>
         </div>
 
         }

@@ -1,0 +1,37 @@
+<div class="pt-[12vh] w-full ">
+    <div class="flex justify-between items-center gap-2 mb-8">
+        
+        <form class="flex w-full border-b-2 border-[#00b89f] items-center">
+            <div class="py-2 px-3 dark:bg-[#36363615] bg-white rounded-tl-sm">
+                <fa-icon [icon]="filter" class="text-[#363636] "></fa-icon>
+            </div>
+            <input placeholder="Project name" type="text"
+                class="focus:outline-none placeholder:text-sm pl-2 w-full  py-2 dark:bg-[#36363615] bg-white">
+            <div class=" py-2 px-3 dark:bg-[#36363615] bg-white rounded-tr-sm">
+                <fa-icon [icon]="search" class=" py-1 px-2 rounded-sm bg-[#00b89f] text-white"></fa-icon>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="w-full flex mb-6 font-mont ">
+        <div class="flex justify-center items-center border-b-2 border-[#00b89f] text-[#00b89f] w-1/3">
+            <p>FrontEnd</p>
+        </div>
+        <div class="flex justify-center items-center border-b-2 dark:border-[#36363615]  border-[#c5c5c59d] w-1/3 dark:text-[#36363615] text-[#c5c5c59d]">
+            <p>BackEnd</p>
+        </div>
+        <div class="flex justify-center items-center border-b-2 dark:border-[#36363615] border-[#c5c5c59d] w-1/3 dark:text-[#36363615] text-[#c5c5c59d]">
+            <p>Others</p>
+        </div>
+    </div>
+
+    <div class="w-full gap-3">
+        @for (item of listProject(); track $index) {
+        <app-project [project]="item"></app-project>
+        }
+    </div>
+
+
+
+</div>
