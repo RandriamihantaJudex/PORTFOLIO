@@ -8,10 +8,11 @@ import { ContactFormComponent } from '../../composant/contact-form/contact-form.
 import { FooterComponent } from '../../composant/footer/footer.component';
 import { ProjectsService } from '../../services/projects.service';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule,ProjectComponent, SkillsComponent,FontAwesomeModule,ContactFormComponent,FooterComponent],
+  imports: [CommonModule,ProjectComponent, SkillsComponent,FontAwesomeModule,ContactFormComponent,FooterComponent,RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
