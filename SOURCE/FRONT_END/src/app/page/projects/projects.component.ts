@@ -20,6 +20,8 @@ service=inject(ProjectsService)
 project:Project | undefined
 routeActuel=inject(ActivatedRoute)
 
+
+
 ngOnInit(): void {
     let project= this.routeActuel.snapshot.paramMap.get('name')
     if(project){

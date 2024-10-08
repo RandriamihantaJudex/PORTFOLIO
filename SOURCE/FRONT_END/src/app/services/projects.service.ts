@@ -45,7 +45,7 @@ export class ProjectsService {
         description: '',
         objectives: [''],
         images: [''],
-        technology: [{nom:'',image:''}],
+        technology: [{nom:'React',image:'../../assets/images/react.svg'}],
         anectodes: 'string',
         favorite: true
       },

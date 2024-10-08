@@ -1,13 +1,13 @@
 <div class="pt-[12vh] w-full ">
     <div class="flex justify-between items-center gap-2 mb-8">
         
-        <form class="flex w-full border-b-2 border-[#00b89f] items-center">
+        <form class="flex w-full border-b-2 border-[#00b89f] items-center" [formGroup]="recherche">
             <div class="py-2 px-3 dark:bg-[#36363615] bg-white rounded-tl-sm">
                 <fa-icon [icon]="filter" class="text-[#363636] "></fa-icon>
             </div>
-            <input placeholder="Project name" type="text"
+            <input (keyup)="searchProject()" formControlName="searchField" placeholder="Project name" type="text"
                 class="focus:outline-none placeholder:text-sm pl-2 w-full  py-2 dark:bg-[#36363615] bg-white">
-            <div class=" py-2 px-3 dark:bg-[#36363615] bg-white rounded-tr-sm">
+            <div (click)="searchProject()" class=" py-2 px-3 dark:bg-[#36363615] bg-white rounded-tr-sm">
                 <fa-icon [icon]="search" class=" py-1 px-2 rounded-sm bg-[#00b89f] text-white"></fa-icon>
             </div>
         </form>
