@@ -1,17 +1,18 @@
-
 @if (etatMenu.menuState()==='in') {
-    <app-slider-menu></app-slider-menu>
+<app-slider-menu></app-slider-menu>
 }
 
 @if (etatMenu.menuState()==='out') {
-    <div class="fixed w-full h-screen disapear z-50">
-        <app-animation-menu-two></app-animation-menu-two>
-    </div>
+<div class="fixed w-full h-screen disapear z-50">
+    <app-animation-menu-two></app-animation-menu-two>
+</div>
 }
 
-<nav  class="z-20 fixed px-[10%] flex h-[7vh] w-full items-center justify-between  text-white dark:text-[#363636]  bg-[#363636] dark:bg-white">
-    <h1 class="z-10 font-mont dark:text-[#00b89f] text-white tracking-wide text-2xl ">JR<span class="code font-raboto text-2xl font-semibold">_</span></h1>
-    <div class=" flex justify-between items-center gap-4 z-10">
+<nav
+    class=" z-20 fixed px-[10%] flex h-[7vh] w-[100vw] items-center justify-between  text-white dark:text-[#363636]  bg-[#363636] dark:bg-white">
+    <h1 class="z-10 font-mont dark:text-[#00b89f] text-white tracking-wide text-2xl ">JR<span
+            class="code font-raboto text-2xl font-semibold">_</span></h1>
+    <div class="md:hidden flex justify-between items-center gap-4 z-10">
         <div (click)="changeTheme()"
             class="border-[1.5px] border-white dark:border-[#363636] rounded-2xl h-7 w-[44px] flex items-center justify-evenly ">
             <div class="invisible" #sunRef>
@@ -22,6 +23,25 @@
             </div>
 
         </div>
-        <fa-icon (click)="etatMenu.chageMenuState()"  [icon]="burger" class="text-2xl "></fa-icon>
+        <fa-icon (click)="etatMenu.chageMenuState()" [icon]="burger" class="text-2xl "></fa-icon>
+    </div>
+
+
+    <div class="flex items-center justify-between gap-6 max-md:hidden">
+        <a routerLink="/home" class="font-mont text-lg dark:text-[#00b89f] text-white">Home</a>
+        <a routerLink="/projects" href="" class="font-mont text-lg dark:text-[#00b89f] text-white">Projects</a>
+        <a  href="" class="font-mont text-lg dark:text-[#00b89f] text-white">Social media</a>
+        <a routerLink="/contact" href="" class="font-mont text-lg dark:text-[#00b89f] text-white">Contact</a>
+        <div (click)="changeTheme()"
+            class="border-[2px] border-white dark:border-[#00b89f] text-[#00b89f] rounded-2xl h-7 w-[44px] flex items-center justify-evenly ">
+            <div class="invisible" #sunRef>
+                <fa-icon [icon]="sun" class="text-sm"></fa-icon>
+            </div>
+            <div #moonRef>
+                <fa-icon [icon]="moon " class="text-base"></fa-icon>
+            </div>
+
+        </div>
+       
     </div>
 </nav>

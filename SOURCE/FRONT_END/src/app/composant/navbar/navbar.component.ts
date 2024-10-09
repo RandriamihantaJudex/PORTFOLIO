@@ -6,11 +6,12 @@ import { SliderMenuComponent } from '../slider-menu/slider-menu.component';
 import { CommonModule } from '@angular/common';
 import { MenuService } from '../../services/menu.service';
 import { AnimationMenuTwoComponent } from '../animation-menu-two/animation-menu-two.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [FontAwesomeModule,SliderMenuComponent,CommonModule,AnimationMenuTwoComponent],
+  imports: [FontAwesomeModule,SliderMenuComponent,CommonModule,AnimationMenuTwoComponent,RouterLink],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })

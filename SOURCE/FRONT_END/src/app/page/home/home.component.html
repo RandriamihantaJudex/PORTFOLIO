@@ -1,30 +1,43 @@
+
+<div #navigation class="h-full fixed w-1/3  hidden flex-col items-center justify-center">
+    <div #LeParent class="flex flex-col">
+        <h1 #texta class="text-2xl font-mont text-[#363636]">Project</h1>
+        <h1 class="text-2xl font-mont text-[#363636]">Skills and Tools</h1>
+        <h1 class="text-2xl font-mont text-[#363636]">About me</h1>
+        <h1 class="text-2xl font-mont text-[#363636]">Contact</h1>
+    </div>
+</div>
+
 <div class=" text-white dark:text-[rgb(54,54,54)]">
     <!-- PRESENTATION -->
     <div class="h-[60vh] w-full inline-flex  flex-col justify-center items-start mt-[25vh] mb-[10vh]">
-        <h2 #nom class="font-mont text-4xl -mt-[100px] z-10 dark:text-[#00b89f] text-white">Randriamihanta</h2>
-        <h2 class="font-mont text-4xl z-10 dark:text-[#00b89f] text-white">Judex</h2>
-        <div #lineOne class="lineOne dark:bg-[#00b89f] bg-white h-[1.5px] mt-2"></div>
-        <div #lineTwo class="lineTwo dark:bg-[#00b89f] bg-white h-[1.5px] mt-3"></div>
-        <h3 class="font-mont mt-5 z-10 text-xl text-white dark:text-[#363636] "><span
-                class="font-bold text-2xl text-[#00b89f] ">Frontend</span> developer
-        </h3>
-        <p class="font-raboto mt-2 text-xs text-justify z-10 text-white dark:text-[#363636] ">
-            Hello,
-            I am a web <span class="font-extrabold text-[#00b89f]">developer</span> seeking my first job, determined to
-            succeed in this field. To achieve this,
-            I am ready to take on any <span class="font-extrabold text-[#00b89f]">challenges</span>, regardless of their
-            complexity. Feel free to contact me for
-            any <span class="font-extrabold text-[#00b89f]">collaboration</span> or <span
-                class="font-extrabold text-[#00b89f]">opportunities</span> related to software development.
-        </p>
-
-        <button
-            class="bg-[#00b89f] font-mont dark:text-white mt-10 text-white rounded-lg px-4 py-1 z-10 text-xl">Contact</button>
-
+        <div class="md:w-1/2 flex flex-col items-start">
+            <h2 #nom class="font-mont text-4xl md:text-6xl -mt-[100px] z-10 dark:text-[#00b89f] text-white">Randriamihanta</h2>
+            <h2 class="font-mont text-4xl md:text-6xl z-10 dark:text-[#00b89f] text-white">Judex</h2>
+            <div #lineOne class="lineOne dark:bg-[#00b89f] bg-white h-[1.5px] md:h-1 mt-2"></div>
+            <div #lineTwo class="lineTwo dark:bg-[#00b89f] bg-white h-[1.5px] md:h-1 mt-3"></div>
+            <h3 class="font-mont mt-5 z-10 text-xl  md:text-2xl text-white dark:text-[#363636] "><span
+                    class="font-bold text-2xl text-[#00b89f] ">Frontend</span> developer
+            </h3>
+            <p class="font-raboto mt-2 text-xs md:text-sm text-justify z-10 text-white dark:text-[#363636] ">
+                Hello,
+                I am a web <span class="font-extrabold text-[#00b89f]">developer</span> seeking my first job, determined to
+                succeed in this field. To achieve this,
+                I am ready to take on any <span class="font-extrabold text-[#00b89f]">challenges</span>, regardless of their
+                complexity. Feel free to contact me for
+                any <span class="font-extrabold text-[#00b89f]">collaboration</span> or <span
+                    class="font-extrabold text-[#00b89f]">opportunities</span> related to software development.
+            </p>
+    
+            <button
+                class="bg-[#00b89f] font-mont dark:text-white mt-10 text-white rounded-lg px-4 py-1 md:px-6 md:py-2 z-10 text-xl">Contact</button>
+    
+        </div>
+       
     </div>
 
     <!-- PROJET -->
-    <div class="w-full">
+    <div #projetSection class="w-full md:w-1/2 md:ml-[50%]">
         <h2 class="w-full font-mont dark:bg-white bg-[#363636] text-white  dark:text-[#00b89f] text-3xl mb-6">Project
         </h2>
         @for (item of favorite(); track $index) {
@@ -32,12 +45,12 @@
         }
         
         <button routerLink="/projects"
-            class="font-mont hover:dark:text-white hover:dark:bg-[#363636] p-2 pl-0 hover:pl-2 rounded-md hover:text-[#363636] hover:bg-white">View
+            class="font-mont hover:dark:text-white hover:dark:bg-[#363636] p-2 pl-0 hover:pl-2 rounded-md hover:text-[#363636] hover:bg-white mt-2">View
             more projects <fa-icon [icon]="arrow" class=" ml-1"></fa-icon></button>
     </div>
 
     <!-- SKILLS -->
-    <div class="w-full font-mont dark:bg-white bg-[#363636] text-white  dark:text-[#00b89f] text-3xl mt-16">
+    <div #skillsSection class="md:w-1/2 md:ml-[50%] w-full font-mont dark:bg-white bg-[#363636] text-white  dark:text-[#00b89f] text-3xl mt-16">
         <h2 class="mb-2">Skills and Tools</h2>
         <app-skills [skills]="skillsIconService.langages" titre="Frontend"></app-skills>
         <app-skills [skills]="skillsIconService.styles" titre="Style and Design"></app-skills>
@@ -45,7 +58,7 @@
     </div>
 
     <!-- ABOUT ME -->
-    <div class="w-full mt-16 mb-6 max-sm:hidden">
+    <div #aboutSection class=" md:w-1/2 md:ml-[50%] w-full mt-16 mb-6 max-sm:hidden ">
         <h2 class="font-mont text-[#00b89f] text-3xl mb-3">About me</h2>
         <p class="text-justify mb-2">Hello, I am <span class="font-mont">Randriamihanta Judex</span>,
             someone who has found happiness in coding and has been passionate about everything related to this field
@@ -68,7 +81,7 @@
                 class="font-mont">determined</span>.</p>
     </div>
 
-    <div class="w-full mt-16 mb-6 font-raboto">
+    <div class="w-full mt-16 mb-6 font-raboto md:hidden">
         <h2 class="font-mont text-[#00b89f] text-3xl mb-3">About me</h2>
         <p class="text-justify mb-2">Hello, I am <span class="font-mont">Randriamihanta Judex</span>, passionate about coding and everything related to
             it. I enjoy <span class="font-mont">creating</span> solutions that are useful to others, particularly in areas that I care about, like
@@ -81,7 +94,7 @@
                 class="font-mont">determined</span>.</p>
     </div>
 
-    <div class="w-full mt-16 pb-12">
+    <div class="w-full mt-16 pb-12 md:w-1/2 md:ml-[50%]">
         <h2 class="font-mont text-[#00b89f] text-3xl mb-3">Contact</h2> 
         <app-contact-form></app-contact-form>     
     </div>
