@@ -17,6 +17,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements AfterViewInit {
+
   @ViewChild('nom') nom!: ElementRef
   @ViewChild('lineOne') lineOne!: ElementRef
   @ViewChild('lineTwo') lineTwo!: ElementRef
@@ -28,11 +29,10 @@ export class HomeComponent implements AfterViewInit {
   @ViewChild('texta') texta!: ElementRef
 
 
-
-  
   skillsIconService = inject(IconSkillsService)
   projectService = inject(ProjectsService)
   favorite = signal(this.projectService.getFavoriteProjects())
+
   // ICONS
   arrow = faArrowRight
 
@@ -42,46 +42,45 @@ export class HomeComponent implements AfterViewInit {
   }
 
   // REINITIALIZE L'ETAT DES ENFANT DU SECTION A GAUCHE
-  reinitialise(){
-    for (let index = 0; index < this.LeParent.nativeElement.childNodes.length; index++) {
-      this.LeParent.nativeElement.childNodes[index].classList.add('text-[#363636]')
-      this.LeParent.nativeElement.childNodes[index].classList.remove('text-[#00b89f]')
+  reinitialise() {
+    for (const child of this.LeParent.nativeElement.children) {
+      child.classList.replace('text-[#00b89f]', 'text-[#363636]')
+      child.children[0].classList.remove('pinoccio')
     }
+  }
+
+  // PLACER LES CHANGEMENT A L'ELEMENT  
+  reinitialiseChild(child: HTMLDivElement) {
+    child.classList.replace('text-[#363636]', 'text-[#00b89f]')
+    child.children[0].classList.add('pinoccio')
   }
 
   // ACTIVE L'ETAT DES ENFANT DU SECTION A GAUCHE EN FONCTION DU NIVEAU DE SCROLL
   @HostListener('window:scroll', ['$event'])
-  onWindowScroll(event: Event): void {
-    if (this.projetSection.nativeElement.getBoundingClientRect().top <= 100) {      
-      if(this.skillsSection.nativeElement.getBoundingClientRect().top > 100){
-       this.reinitialise()
-       this.LeParent.nativeElement.childNodes[0].classList.remove('text-[#363636]')
-       this.LeParent.nativeElement.childNodes[0].classList.add('text-[#00b89f]')
-      }
-      else if(this.aboutSection.nativeElement.getBoundingClientRect().top > 100){
+  onWindowScroll(): void {
+    if (this.projetSection.nativeElement.getBoundingClientRect().top <= 100) {
+      if (this.skillsSection.nativeElement.getBoundingClientRect().top > 100) {
         this.reinitialise()
-        this.LeParent.nativeElement.childNodes[1].classList.remove('text-[#363636]')
-        this.LeParent.nativeElement.childNodes[1].classList.add('text-[#00b89f]')
+        this.reinitialiseChild(this.LeParent.nativeElement.children[0])
       }
-      else if(this.aboutSection.nativeElement.getBoundingClientRect().top < 0){
+      else if (this.aboutSection.nativeElement.getBoundingClientRect().top > 100) {
         this.reinitialise()
-        this.LeParent.nativeElement.childNodes[3].classList.remove('text-[#363636]')
-        this.LeParent.nativeElement.childNodes[3].classList.add('text-[#00b89f]')
+        this.reinitialiseChild(this.LeParent.nativeElement.children[1])
       }
-      else{
+      else if (this.aboutSection.nativeElement.getBoundingClientRect().top < 0) {
         this.reinitialise()
-        this.LeParent.nativeElement.childNodes[2].classList.remove('text-[#363636]')
-        this.LeParent.nativeElement.childNodes[2].classList.add('text-[#00b89f]')
+        this.reinitialiseChild(this.LeParent.nativeElement.children[3])
       }
-      
-      this.navigation.nativeElement.classList.remove('hidden')
-      this.navigation.nativeElement.classList.add('flex')
+      else {
+        this.reinitialise()
+        this.reinitialiseChild(this.LeParent.nativeElement.children[2])
+      }
+
+      this.navigation.nativeElement.classList.replace('hidden', 'flex')
     }
     else {
-      this.navigation.nativeElement.classList.remove('flex')
-      this.navigation.nativeElement.classList.add('hidden')
+      this.navigation.nativeElement.classList.replace('flex', 'hidden')
     }
   }
-
 
 }

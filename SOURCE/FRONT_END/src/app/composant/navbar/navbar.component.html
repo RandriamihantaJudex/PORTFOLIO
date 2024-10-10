@@ -13,8 +13,8 @@
     <h1 class="z-10 font-mont dark:text-[#00b89f] text-white tracking-wide text-2xl ">JR<span
             class="code font-raboto text-2xl font-semibold">_</span></h1>
     <div class="md:hidden flex justify-between items-center gap-4 z-10">
-        <div (click)="changeTheme()"
-            class="border-[1.5px] border-white dark:border-[#363636] rounded-2xl h-7 w-[44px] flex items-center justify-evenly ">
+        <div (click)="changeTheme(sunRefe,moonRefe)"
+            class="md:hidden border-[1.5px] border-white dark:border-[#363636] rounded-2xl h-7 w-[44px] flex items-center justify-evenly ">
             <div class="invisible" #sunRef>
                 <fa-icon [icon]="sun" class="text-sm"></fa-icon>
             </div>
@@ -23,6 +23,9 @@
             </div>
 
         </div>
+
+        
+
         <fa-icon (click)="etatMenu.chageMenuState()" [icon]="burger" class="text-2xl "></fa-icon>
     </div>
 
@@ -32,12 +35,12 @@
         <a routerLink="/projects" href="" class="font-mont text-lg dark:text-[#00b89f] text-white">Projects</a>
         <a  href="" class="font-mont text-lg dark:text-[#00b89f] text-white">Social media</a>
         <a routerLink="/contact" href="" class="font-mont text-lg dark:text-[#00b89f] text-white">Contact</a>
-        <div (click)="changeTheme()"
+        <div (click)="changeTheme(sunRefs,moonRefs)"
             class="border-[2px] border-white dark:border-[#00b89f] text-[#00b89f] rounded-2xl h-7 w-[44px] flex items-center justify-evenly ">
-            <div class="invisible" #sunRef>
+            <div class="invisible" #sunRefa>
                 <fa-icon [icon]="sun" class="text-sm"></fa-icon>
             </div>
-            <div #moonRef>
+            <div #moonRefa>
                 <fa-icon [icon]="moon " class="text-base"></fa-icon>
             </div>
 

@@ -41,3 +41,16 @@
    margin-left:-10%;
    padding: 0 10%;
 }   
+
+.pinoccio{
+   animation: lie 0.5s forwards;
+}
+@keyframes lie {
+   0%{
+      width: 24px;
+   }
+   100%{
+      width: 50px;
+      background-color: #00b89f;
+   }
+}
