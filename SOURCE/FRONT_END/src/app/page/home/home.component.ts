@@ -9,10 +9,11 @@ import { FooterComponent } from '../../composant/footer/footer.component';
 import { ProjectsService } from '../../services/projects.service';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { TitiesComponent } from '../../composant/tities/tities.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ProjectComponent, SkillsComponent, FontAwesomeModule, ContactFormComponent, FooterComponent, RouterLink],
+  imports: [CommonModule, ProjectComponent, SkillsComponent, FontAwesomeModule, ContactFormComponent, FooterComponent, RouterLink,TitiesComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
