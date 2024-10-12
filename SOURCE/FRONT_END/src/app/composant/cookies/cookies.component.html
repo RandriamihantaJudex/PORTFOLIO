@@ -1,1 +1,10 @@
-<p>cookies works!</p>
+<div class="showCookies  w-full max-lg:hidden flex items-end flex-col mb-7">
+
+    <div class="rotate-180 mr-[100px] -mt-28">
+        <app-arrowlottie></app-arrowlottie>
+    </div>
+    <a  (click)="aff()" href="../../../assets/pdf/Randriamihanta Judex.pdf" download="randriamihantaJudexCV.pdf" class=" px-3 py-2 hover:cursor-pointer  bg-[#00b89f] rounded-lg flex justify-evenly items-center text-white font-mont">
+        <fa-icon [icon]="download"></fa-icon>
+        <p>Download my cv</p>
+    </a>
+</div>

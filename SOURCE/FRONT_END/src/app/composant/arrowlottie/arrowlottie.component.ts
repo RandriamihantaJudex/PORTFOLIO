@@ -4,17 +4,17 @@ import { AnimationOptions } from 'ngx-lottie';
 import { LottieComponent } from 'ngx-lottie';
 
 @Component({
-  selector: 'app-tities',
+  selector: 'app-arrowlottie',
   standalone: true,
   imports: [LottieComponent],
-  templateUrl: './tities.component.html',
-  styleUrl: './tities.component.css'
+  templateUrl: './arrowlottie.component.html',
+  styleUrl: './arrowlottie.component.css'
 })
-export class TitiesComponent {
+export class ArrowlottieComponent {
   private animationItem: AnimationItem | undefined;
 
   options: AnimationOptions = {
-    path: '../../../assets/lotties/front.json',
+    path: '../../../assets/lotties/arrowlottie.json',
     loop: true,
     autoplay: true
   };
@@ -22,6 +22,4 @@ export class TitiesComponent {
   animationCreated(animationItem: AnimationItem): void {
     this.animationItem = animationItem;
   }
-
- 
 }

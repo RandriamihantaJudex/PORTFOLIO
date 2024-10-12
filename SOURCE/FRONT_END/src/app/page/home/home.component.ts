@@ -10,10 +10,21 @@ import { ProjectsService } from '../../services/projects.service';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TitiesComponent } from '../../composant/tities/tities.component';
+import { CookiesComponent } from '../../composant/cookies/cookies.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ProjectComponent, SkillsComponent, FontAwesomeModule, ContactFormComponent, FooterComponent, RouterLink,TitiesComponent],
+  imports: [
+    CommonModule,
+    ProjectComponent,
+    SkillsComponent,
+    FontAwesomeModule,
+    ContactFormComponent,
+    FooterComponent,
+    RouterLink,
+    TitiesComponent,
+    CookiesComponent
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

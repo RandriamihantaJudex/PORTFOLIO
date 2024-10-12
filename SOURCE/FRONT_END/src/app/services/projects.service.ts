@@ -22,18 +22,30 @@ export class ProjectsService {
           "Enable experienced professionals to mentor the next generation.",
           "Promote the digital sector and its opportunities."
         ],
-        images: ['../../assets/images/padawan.png','../../assets/images/padawan.png'],
+        images: ['../../assets/images/padawan/padawan1.png',
+          '../../assets/images/padawan/padawan2.png',
+          '../../assets/images/padawan/padawan3.png',
+          '../../assets/images/padawan/padawan4.png',
+          '../../assets/images/padawan/padawan5.png',
+        ],
         technology: [{nom:'React',image:'../../assets/images/react.svg'},{nom:'Tailwind Css',image:'../../assets/images/tailwind.svg'}],
         anectodes: 'Aucune Actuellement',
         favorite: true
       },
       {
         title: 'My Portfolio',
-        image: 'dfdf',
+        image: '../../assets/images/portfolio/portfolio1.png',
         link: { github: 'https://github.com/RandriamihantaJudex/PORTFOLIO.git', web: '' },
         description: 'This site is my personal platform where I showcase all my work and provide some information about myself. I also welcome anyone interested in contacting me.',
         objectives: ['Showcase the projects I have completed.','Establish an online presence.','Centralize information about myself that may be useful to others.','Facilitate collaboration opportunities.'],
-        images: [''],
+        images: ['../../assets/images/portfolio/portfolio1.png',
+          '../../assets/images/portfolio/portfolio2.png',
+          '../../assets/images/portfolio/portfolio3.png',
+          '../../assets/images/portfolio/portfolio4.png',
+          '../../assets/images/portfolio/portfolio5.png',
+          '../../assets/images/portfolio/portfolio6.png',
+          '../../assets/images/portfolio/portfolio7.png'
+        ],
         technology: [{nom:'Angular',image:'../../assets/images/angular.svg'},{nom:'Tailwind Css',image:'../../assets/images/tailwind.svg'},{nom:'Splidejs',image:'../../assets/images/splide.svg'}],
         anectodes: 'Aucune Actuellement',
         favorite: true
